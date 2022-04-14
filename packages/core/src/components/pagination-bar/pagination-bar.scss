@@ -1,0 +1,62 @@
+// Pagination Bar
+// --------------------------------------------------
+
+.pagination__nav {
+  display: flex;
+
+  border-radius: 20px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  .pagination {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding-inline-start: 0px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+  }
+
+  .pagination__item {
+      pointer-events: none;
+  }
+
+}
+
+.pagination__button {
+  margin: 0;
+  font-weight: 500;
+
+  &.active {
+    font-weight: 800;
+  }
+}
+
+.pagination__button:not(.pagination__button--collapsed) {
+  --padding-start: 12px;
+  --padding-end: 12px;
+}
+
+.pagination__button-icon {
+  font-size: 1em;
+}
+
+.pagination__item .pagination__button {
+  --padding-start: 4px;
+  --padding-end: 4px;
+}
+
+:host(:not(.pagination__bar--collapsed)) .pagination__nav {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+:host(.pagination__bar--collapsed),
+:host(.pagination__bar--collapsed) .pagination__nav {
+  width: 100%;
+}
+
+:host(.pagination__bar--collapsed) .pagination {
+  width: 100%;
+  justify-content: space-between;
+}

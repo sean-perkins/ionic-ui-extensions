@@ -1,0 +1,27 @@
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  --empty-state-icon-size: 72px;
+}
+
+.empty-state {
+  &__description {
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  &__icon {
+    font-size: var(--empty-state-icon-size);
+  }
+  &__action {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+  }
+}

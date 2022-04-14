@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empty State | Icon with action</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <style>
+    .empty-state {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+
+      height: 100%;
+    }
+
+    .empty-state__icon {
+      font-size: 72px;
+    }
+
+    .empty-state__description {
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <device-preview> -->
+  <ion-app>
+    <ion-content class="ion-padding">
+      <div class="empty-state">
+        <ion-icon class="empty-state__icon" name="wifi-outline"></ion-icon>
+        <ion-text>
+          <h1>Check Your Connection</h1>
+        </ion-text>
+        <ion-text class="ion-text-center empty-state__description" color="medium">
+          There is a connection error. Please check your internet and try again.
+        </ion-text>
+      </div>
+    </ion-content>
+    <ion-footer class="ion-padding">
+      <ion-button expand="block">
+        Try again
+      </ion-button>
+    </ion-footer>
+  </ion-app>
+  <!-- </device-preview> -->
+</body>
+
+</html>

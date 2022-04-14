@@ -1,0 +1,37 @@
+
+:host {
+  display: grid;
+  grid-template-columns: var(--timeline-item-columns);
+
+  padding: 16px 0;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+.timeline__divider {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  &::after, &::before {
+    content: ' ';
+    width: 1px;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    background: var(--timeline-divider-line-background);
+    transform: translate3d(-50%,0,0);
+  }
+
+  &::after {
+    top: 0%;
+  }
+
+  &::before {
+    bottom: 100%;
+  }
+}

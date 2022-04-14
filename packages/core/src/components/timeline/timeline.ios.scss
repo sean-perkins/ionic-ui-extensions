@@ -1,0 +1,5 @@
+@import 'timeline';
+
+.timeline.timeline-has-divider::before {
+  top: 42px;
+}

@@ -1,0 +1,116 @@
+```html
+<style>
+  .stories {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    overflow-y: auto;
+  }
+
+  .story__card {
+    --ion-card-background: var(--card-gradient), var(--card-image);
+
+    margin-inline: 0;
+
+    height: 300px;
+    width: 200px;
+    min-width: 200px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .story__card:nth-child(1) {
+    --card-gradient: linear-gradient(
+      to bottom,
+      rgba(253, 251, 251, 0.52),
+      rgba(235, 237, 238, 0.73)
+    );
+    --card-image: url("https://media.vanityfair.com/photos/5fdbe68a0b3a49f29a96d9fa/master/w_2000,h_1423,c_limit/Celebs-Dominated-the-Tabloids-2020-Embed02.jpg");
+  }
+
+  .story__card:nth-child(2) {
+    --card-gradient: linear-gradient(
+      to top,
+      rgba(168, 237, 234, 0.52),
+      rgba(254, 214, 227, 0.73)
+    );
+    --card-image: url("https://i.pinimg.com/736x/a6/a7/df/a6a7dfa9e60ceb1883bcaa9126bd6ebb--hollywood-walk-of-fame-ryan-reynolds.jpg");
+  }
+
+  .story__card:nth-child(3) {
+    --card-gradient: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    );
+    --card-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/02/Slashing_in_the_MTA_Chambers_St_Station_1.jpg?quality=75&strip=all&w=878");
+  }
+
+  .story__info {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+
+    color: white;
+    font-weight: bold;
+  }
+
+  .story__avatar {
+    background: white;
+    border: 5px solid #6370ff;
+  }
+</style>
+
+<ion-content>
+  <div class="stories">
+    <ion-card class="story__card">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-avatar class="story__avatar">
+            <img src="https://img.etimg.com/photo/60882360.cms" />
+          </ion-avatar>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <div class="story__info">
+        <h5>ET News</h5>
+      </div>
+    </ion-card>
+
+    <ion-card class="story__card">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-avatar class="story__avatar">
+            <img
+              src="https://imageio.forbes.com/specials-images/imageserve/5ed017eb2d65910007477d79/0x0.jpg"
+            />
+          </ion-avatar>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <div class="story__info">
+        <h5>Ryan Reynolds</h5>
+      </div>
+    </ion-card>
+
+    <ion-card class="story__card">
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-avatar class="story__avatar">
+            <img
+              src="https://i.pinimg.com/originals/97/7a/31/977a31b32c998dda750cea2db6a7ebf7.png"
+            />
+          </ion-avatar>
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <div class="story__info">
+        <h5>NY Times</h5>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+```

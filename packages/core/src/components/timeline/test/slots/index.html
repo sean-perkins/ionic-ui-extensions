@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Timeline | Slots</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/ionic-ui-extensions/ionic-ui-extensions.esm.js"></script>
+
+  <style>
+    ion-content {
+      --background: #eee;
+    }
+
+    ion-x-timeline-item.incomplete::part(dot) {
+      background: white;
+      border: 2px solid #006ED1;
+    }
+
+    ion-x-timeline-item.complete::part(dot) {
+      color: white;
+      font-size: 0.75rem;
+    }
+
+    ion-x-timeline-item.complete:not([disabled])::part(dot) {
+      background: #006ED1;
+    }
+
+    .large {
+      --dot-width: 20px;
+      --dot-height: 20px;
+    }
+
+    .huge {
+      --dot-width: 48px;
+      --dot-height: 48px;
+    }
+
+    ion-x-timeline-header {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    ion-x-timeline-item [slot="subtitle"] {
+      font-size: 0.85rem;
+      color: #989aa2;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <ion-app>
+    <ion-content class="ion-padding">
+      <ion-x-timeline>
+
+        <ion-x-timeline-header>
+          DEC
+        </ion-x-timeline-header>
+
+        <ion-x-timeline-item class="incomplete huge" disabled="true">
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          <ion-icon slot="dot" name="checkmark-outline"></ion-icon>
+          This is the content
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item class="complete large" disabled="true">
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          <ion-icon slot="dot" name="checkmark-outline"></ion-icon>
+          This is the content
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item class="complete" disabled="true">
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          <ion-icon slot="dot" name="checkmark-outline"></ion-icon>
+          This is the content
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item class="incomplete">
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          This is the content
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-header>
+          JAN
+        </ion-x-timeline-header>
+
+        <ion-x-timeline-item class="complete">
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          <ion-icon slot="dot" name="checkmark-outline"></ion-icon>
+          This is the content
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>21</span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil odit eius voluptatum
+              quidem dicta. Aliquam totam quo unde eaque ex quis, laudantium earum consectetur accusamus obcaecati
+              itaque
+              aut. Non, autem.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+      </ion-x-timeline>
+
+    </ion-content>
+  </ion-app>
+
+
+</body>
+
+</html>

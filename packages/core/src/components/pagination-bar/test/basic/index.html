@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Pagination Bar | Basic</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
+  <script type="module" src="../../../../../dist/ionic-ui-extensions/ionic-ui-extensions.esm.js"></script>
+
+  <style>
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <ion-app>
+    <ion-content class="ion-padding">
+      <div class="grid">
+        <ion-x-pagination-bar size="3" total-elements="1000" page="1"></ion-x-pagination-bar>
+
+        <ion-x-pagination-bar size="3" total-elements="1000" page="0" collapse="true" fill="solid">
+          <span slot="prev-button">Previous</span>
+          <span slot="next-button">Next</span>
+        </ion-x-pagination-bar>
+      </div>
+    </ion-content>
+  </ion-app>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  --timeline-divider-line-background: var(--ion-color-step-200, #cccccc);
+  --timeline-divider-dot-background: var(--ion-color-step-200, #cccccc);
+  /**
+   * @prop --timeline-dot-padding The top/bottom padding to apply to the timeline divider dot.
+   */
+  --timeline-dot-padding: 0px;
+
+  --timeline-item-columns: 1fr 1fr 3fr;
+}
+
+.timeline {
+  overflow: hidden;
+}
+
+// .timeline.timeline-has-divider::before {
+//   content: ' ';
+//   width: 2px;
+//   height: 100%;
+//   top: 30px;
+//   position: absolute;
+//   background: var(--timeline-divider-background);
+
+//   transform: translateX(2px);
+// }
+
+:host([align="start"]) {
+  .timeline::before {
+    left: 20%;
+  }
+}
+
+:host([align="center"]) {
+  .timeline::before {
+    left: 50%;
+  }
+}
+
+:host([align="end"]) {
+  .timeline::before {
+    right: 20%;
+  }
+}
+
