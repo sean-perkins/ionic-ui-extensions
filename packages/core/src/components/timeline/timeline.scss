@@ -1,5 +1,5 @@
 
-:host {
+ion-x-timeline {
   display: flex;
   flex-direction: column;
 
@@ -15,36 +15,43 @@
   --timeline-item-columns: 1fr 1fr 3fr;
 }
 
-.timeline {
-  overflow: hidden;
+ion-x-timeline[horizontal] {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+
+  overflow-x: auto;
+
+  height: 100%;
+
+  scroll-snap-type: x mandatory;
 }
 
-// .timeline.timeline-has-divider::before {
-//   content: ' ';
-//   width: 2px;
-//   height: 100%;
-//   top: 30px;
-//   position: absolute;
-//   background: var(--timeline-divider-background);
+ion-x-timeline[horizontal] ion-x-timeline-item {
+  --timeline-item-columns: 1fr;
 
-//   transform: translateX(2px);
-// }
+  flex-shrink: 0;
 
-:host([align="start"]) {
-  .timeline::before {
-    left: 20%;
-  }
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  scroll-snap-align: start;
 }
 
-:host([align="center"]) {
-  .timeline::before {
-    left: 50%;
-  }
+ion-x-timeline[horizontal] ion-x-timeline-item:not(:first-child) {
+  border-left: 1px solid var(--timeline-divider-line-background);
 }
 
-:host([align="end"]) {
-  .timeline::before {
-    right: 20%;
-  }
+ion-x-timeline[horizontal] ion-x-timeline-item::part(divider) {
+  display: none;
+}
+
+ion-x-timeline[horizontal] ion-x-timeline-item::part(subtitle) {
+  border-bottom: 1px solid var(--timeline-divider-line-background);
+  padding: 8px;
+  background-color: rgba(247,247,248, 0.8);
+  justify-content: flex-start;
 }
 

@@ -1,5 +1,4 @@
 import { Component, h, Host, Prop } from '@stencil/core';
-import { TimelineAlign } from './timeline-interface';
 
 @Component({
   tag: 'ion-x-timeline',
@@ -7,25 +6,18 @@ import { TimelineAlign } from './timeline-interface';
     ios: 'timeline.ios.scss',
     md: 'timeline.md.scss',
   },
-  shadow: true,
+  // scoped: true,
 })
 export class Timeline {
-  @Prop({ reflect: true }) align: TimelineAlign = 'start';
-
-  @Prop() divider = true;
+  /**
+   * `true` if the timeline orientation is horizontal.
+   */
+  @Prop({ reflect: true }) horizontal: boolean;
 
   render() {
-    const { divider } = this;
     return (
       <Host>
-        <div
-          class={{
-            timeline: true,
-            ['timeline-has-divider']: divider,
-          }}
-        >
-          <slot></slot>
-        </div>
+        <slot></slot>
       </Host>
     );
   }

@@ -51,28 +51,29 @@ export default function Playground(props) {
         ],
         defaultOutput: "javascript",
       }}
-      onOpenOutputTarget={(output, codeBlock, options) => {
+      onOpenOutputTarget={(output, codeBlock) => {
         switch (output) {
           case "angular":
-            openAngularEditor(codeBlock, options);
+            openAngularEditor(codeBlock);
             break;
           case "react":
-            openReactEditor(codeBlock, options);
+            openReactEditor(codeBlock);
             break;
           case "vue":
-            openVueEditor(codeBlock, options);
+            openVueEditor(codeBlock);
             break;
           case "javascript":
-            openHtmlEditor(codeBlock, options);
+            openHtmlEditor(codeBlock);
             break;
         }
       }}
       controls={{
         stackblitz: true,
       }}
+      defaultExpanded={false}
       isDarkMode={colorMode === "dark"}
       {...props}
-      source={useBaseUrl(props.source)}
+      src={useBaseUrl(props.src)}
     />
   );
 }

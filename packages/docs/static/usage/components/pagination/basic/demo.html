@@ -4,26 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pagination</title>
+  <title>Pagination | Basic </title>
   <link rel="stylesheet" href="../../../common.css" />
   <script src="../../../common.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <script type="module" src="http://localhost:3001/dist/ionic-ui-extensions/ionic-ui-extensions.esm.js"></script>
+
+  <style>
+    ion-toolbar {
+      --ion-toolbar-background: white;
+    }
+  </style>
 </head>
 
 <body>
   <ion-app>
     <ion-content>
-      <div class="container">
-        <ion-button>Previous</ion-button>
-        <ion-button>1</ion-button>
-        <ion-button>2</ion-button>
-        <ion-button>3</ion-button>
-        <ion-button>4</ion-button>
-        <ion-button>5</ion-button>
-        <ion-button>Next</ion-button>
-      </div>
     </ion-content>
+    <ion-footer>
+      <ion-toolbar>
+        <ion-x-pagination-bar size="3" total-elements="1000" page="1"></ion-x-pagination-bar>
+      </ion-toolbar>
+    </ion-footer>
+
   </ion-app>
 </body>
 

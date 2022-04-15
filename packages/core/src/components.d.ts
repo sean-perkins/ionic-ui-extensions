@@ -6,7 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { PaginationBarChangeEventDetail } from "./components/pagination-bar/pagination-bar-interface";
-import { TimelineAlign } from "./components/timeline/timeline-interface";
 export namespace Components {
     interface IonXEmptyState {
         "description": string;
@@ -38,8 +37,10 @@ export namespace Components {
         "totalElements": number;
     }
     interface IonXTimeline {
-        "align": TimelineAlign;
-        "divider": boolean;
+        /**
+          * `true` if the timeline orientation is horizontal.
+         */
+        "horizontal": boolean;
     }
     interface IonXTimelineHeader {
     }
@@ -124,8 +125,10 @@ declare namespace LocalJSX {
         "totalElements"?: number;
     }
     interface IonXTimeline {
-        "align"?: TimelineAlign;
-        "divider"?: boolean;
+        /**
+          * `true` if the timeline orientation is horizontal.
+         */
+        "horizontal"?: boolean;
     }
     interface IonXTimelineHeader {
     }

@@ -4,4 +4,4 @@ import angular from './angular.md';
 import react from './react.md';
 import vue from './vue.md';
 
-<Playground code={{ react, angular, vue }} source="usage/message/basic/demo.html" />
+<Playground code={{ react, angular, vue }} src="usage/message/basic/demo.html" />

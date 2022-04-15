@@ -231,6 +231,7 @@
 
   :root {
     --ion-safe-area-top: 26px;
+    --ion-safe-area-bottom: 20px;
   }
 
 .container {

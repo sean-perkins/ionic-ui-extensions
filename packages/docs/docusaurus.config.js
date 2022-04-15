@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ionic UI",
+  title: "Ionic UI Extensions",
   tagline: "Dinosaurs are cool",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
@@ -45,7 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Ionic UI",
+        title: "Ionic UI Extensions",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",

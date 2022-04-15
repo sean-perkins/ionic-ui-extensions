@@ -24,7 +24,7 @@ export class TimelineItem implements ComponentInterface {
   render() {
     return (
       <Host class={getIonMode(this)}>
-        <div class="timeline-item__content timeline-item__before">
+        <div class="timeline-item__content timeline-item__before" part="subtitle">
           <slot name="subtitle"></slot>
         </div>
         <div class="timeline-item__divider" part="divider">
@@ -32,7 +32,7 @@ export class TimelineItem implements ComponentInterface {
             <slot name="dot"></slot>
           </div>
         </div>
-        <div class="timeline-item__content timeline-item__after">
+        <div class="timeline-item__content timeline-item__after" part="content">
           <slot></slot>
         </div>
       </Host>

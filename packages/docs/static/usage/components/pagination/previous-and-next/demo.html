@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagination | Previous & Next </title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <script type="module" src="http://localhost:3001/dist/ionic-ui-extensions/ionic-ui-extensions.esm.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div style="width:100%;">
+      <div class="ion-margin-bottom">
+        <div>Page: <span id="page">1</span></div>
+        <div>Page Size: 10</div>
+        <div>Total Pages: <span id="totalPages">4</span></div>
+        <div>Total Records: <span id="totalRecords">40</span></div>
+      </div>
+      <ion-x-pagination-bar size="10" total-elements="40" page="0" collapse="true" fill="solid">
+        <span slot="prev-button">Previous</span>
+        <span slot="next-button">Next</span>
+      </ion-x-pagination-bar>
+    </div>
+  </div>
+
+  <script>
+    const paginationBar = document.querySelector('ion-x-pagination-bar');
+    paginationBar.addEventListener('ionChange', (event) => {
+      document.querySelector('#page').innerHTML = event.detail.page + 1;
+      document.querySelector('#totalPages').innerHTML = event.detail.totalPages;
+      document.querySelector('#totalRecords').innerHTML = event.detail.totalRecords;
+    });
+  </script>
+</body>
+
+</html>

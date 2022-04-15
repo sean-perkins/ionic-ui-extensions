@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline | Horizontal</title>
+  <link rel="stylesheet" href="../../../common.css" />
+  <script src="../../../common.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@6/dist/ionic/ionic.esm.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@6/css/ionic.bundle.css" />
+
+  <script type="module" src="http://localhost:3001/dist/ionic-ui-extensions/ionic-ui-extensions.esm.js"></script>
+
+  <style>
+    ion-content {
+      --background: #eee;
+    }
+
+    ion-x-timeline-header {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    ion-x-timeline-item [slot="subtitle"] {
+      font-size: 0.85rem;
+      color: #989aa2;
+      font-weight: 500;
+    }
+
+    ion-x-timeline-item {
+      max-width: 350px;
+    }
+  </style>
+</head>
+
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>
+          Horizontal Timeline
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-x-timeline horizontal="true">
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>21 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>22 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>23 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>24 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>25 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+        <ion-x-timeline-item>
+          <div slot="subtitle">
+            <span>26 <small>DEC</small></span>
+          </div>
+          <ion-card>
+            <ion-card-content>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </ion-card-content>
+          </ion-card>
+        </ion-x-timeline-item>
+
+      </ion-x-timeline>
+    </ion-content>
+  </ion-app>
+</body>
+
+</html>
